@@ -74,7 +74,7 @@
 				</div>
 			</div>
 		</c:when>
-		<c:when test="${mode=='MODE_NEW_SUPPLIER' || mode=='MODE_UPDATE_SUPPLIER'}">
+		<c:when test="${mode=='MODE_NEW' || mode=='MODE_UPDATE'}">
 			<div class="container text-center">
 				<h3>Supplier</h3>
 				<hr />

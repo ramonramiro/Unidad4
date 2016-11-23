@@ -28,14 +28,14 @@ public class MatterController {
 	
 	@GetMapping("/new-matter")
 	public String newMatter(HttpServletRequest request){
-		request.setAttribute("mode", "MODE_NEW_MATTER");
+		request.setAttribute("mode", "MODE_NEW");
 		return "matter";
 	}
 	
 	@GetMapping("/update-matter")
 	public String updateMatter(@RequestParam int id, HttpServletRequest request){
 		request.setAttribute("matter", matterService.findOne(id));
-		request.setAttribute("mode", "MODE_UPDATE_MATTER");
+		request.setAttribute("mode", "MODE_UPDATE");
 		return "matter";
 	}
 	

@@ -28,14 +28,14 @@ public class SupplierController {
 	
 	@GetMapping("/new-supplier")
 	public String newSupplier(HttpServletRequest request){
-		request.setAttribute("mode", "MODE_NEW_SUPPLIER");
+		request.setAttribute("mode", "MODE_NEW");
 		return "supplier";
 	}
 	
 	@GetMapping("/update-supplier")
 	public String updateSupplier(@RequestParam int id, HttpServletRequest request){
 		request.setAttribute("supplier", supplierService.findOne(id));
-		request.setAttribute("mode", "MODE_UPDATE_SUPPLIER");
+		request.setAttribute("mode", "MODE_UPDATE");
 		return "supplier";
 	}
 	
